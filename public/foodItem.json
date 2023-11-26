@@ -1,8 +1,8 @@
 [
     {
       "id": 1,
-      "title": "Delicious Spaghetti Bolognese",
-      "image": "https://example.com/meal1.jpg",
+      "title": "Breakfast",
+      "image": "https://i.ibb.co/NS8KMqF/Sidneys-Banana-Pancakes-7.webp",
       "meal_distributor": "Distributor A",
       "meal_description": "Spaghetti Bolognese",
       "ingredients": "Spaghetti, Tomato Sauce, Ground Beef, Onions, Garlic",
@@ -12,8 +12,8 @@
     },
     {
       "id": 2,
-      "title": "Vegetarian Stir Fry Extravaganza",
-      "image": "https://example.com/meal2.jpg",
+      "title": "Breakfast",
+      "image": "https://i.ibb.co/jwxXjRs/f4604e05f6a9eaca99afddd69e849005-c02485d4-0841-4de6-b152-69deb38693f2.jpg",
       "meal_distributor": "Distributor B",
       "meal_description": "Vegetarian Stir Fry",
       "ingredients": "Broccoli, Carrots, Bell Peppers, Tofu, Soy Sauce",
@@ -23,8 +23,8 @@
     },
     {
       "id": 3,
-      "title": "Savory Chicken Curry Delight",
-      "image": "https://example.com/meal3.jpg",
+      "title": "Breakfast",
+      "image": "https://i.ibb.co/p30f6cC/k-Photo-Recipes-2021-09-breakfast-grits-New-Finals-2021-10-12-ATK8035.jpg",
       "meal_distributor": "Distributor C",
       "meal_description": "Chicken Curry",
       "ingredients": "Chicken, Curry Sauce, Potatoes, Coconut Milk, Spices",
@@ -34,8 +34,8 @@
     },
     {
       "id": 4,
-      "title": "Classic Margherita Pizza",
-      "image": "https://example.com/meal4.jpg",
+      "title": "Lunch",
+      "image": "https://i.ibb.co/jz13LBk/diy-taco-lunch-box-54f8791776b64900b285fbfc22a4f0bc.jpg",
       "meal_distributor": "Distributor A",
       "meal_description": "Margherita Pizza",
       "ingredients": "Dough, Tomato Sauce, Mozzarella, Basil",
@@ -45,8 +45,8 @@
     },
     {
       "id": 5,
-      "title": "Vegan Buddha Bowl Bliss",
-      "image": "https://example.com/meal5.jpg",
+      "title": "Lunch",
+      "image": "https://i.ibb.co/PcCqw3w/school-lunch-tray.jpg",
       "meal_distributor": "Distributor B",
       "meal_description": "Vegan Buddha Bowl",
       "ingredients": "Quinoa, Chickpeas, Avocado, Kale, Tahini Dressing",
@@ -56,8 +56,8 @@
     },
     {
       "id": 6,
-      "title": "Pasta Primavera Extravaganza",
-      "image": "https://example.com/meal6.jpg",
+      "title": "Lunch",
+      "image": "https://i.ibb.co/ZBXbqr8/feb20-green-goodness-chicken-sandwich-taste-157311-1.jpg",
       "meal_distributor": "Distributor C",
       "meal_description": "Pasta Primavera",
       "ingredients": "Pasta, Assorted Vegetables, Olive Oil, Parmesan Cheese",
@@ -67,8 +67,8 @@
     },
     {
       "id": 7,
-      "title": "Tasty Beef Tacos Fiesta",
-      "image": "https://example.com/meal7.jpg",
+      "title": "Dinner",
+      "image": "https://i.ibb.co/jJYdPjt/OLI-0320-Healthy-Cumin-Crusted-Chicken-Breast-With-Kale-Salad-Humous-02786-preview-eba91c9.jpg",
       "meal_distributor": "Distributor A",
       "meal_description": "Beef Tacos",
       "ingredients": "Ground Beef, Taco Shells, Lettuce, Tomatoes, Cheese",
@@ -78,8 +78,8 @@
     },
     {
       "id": 8,
-      "title": "Mushroom Risotto Elegance",
-      "image": "https://example.com/meal8.jpg",
+      "title": "Dinner",
+      "image": "https://i.ibb.co/MCQ64wj/46173052.jpg",
       "meal_distributor": "Distributor B",
       "meal_description": "Mushroom Risotto",
       "ingredients": "Arborio Rice, Mushrooms, Chicken Broth, Parmesan, White Wine",
@@ -89,8 +89,8 @@
     },
     {
       "id": 9,
-      "title": "Scrumptious Salmon Teriyaki",
-      "image": "https://example.com/meal9.jpg",
+      "title": "Dinner",
+      "image": "https://i.ibb.co/qMd60Bq/images.jpg",
       "meal_distributor": "Distributor C",
       "meal_description": "Salmon Teriyaki",
       "ingredients": "Salmon, Teriyaki Sauce, Broccoli, Rice",

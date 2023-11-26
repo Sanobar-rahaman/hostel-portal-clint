@@ -1,7 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContex } from "../Provider/AuthProvider";
 
 
 const NavBar = () => {
+    const{user,logOut} = useContext(AuthContex)
+    const handlogOut =()=>{
+        logOut()
+        .then(result=>{
+            console.log(result);
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    }
     const Links = <>
     <li><NavLink to='/'>Home</NavLink></li>
     {/* <li><NavLink to='/login'>login</NavLink></li>
@@ -9,6 +21,7 @@ const NavBar = () => {
     <li><NavLink to='/meals'>Meals</NavLink></li>
     <li><NavLink to='/upComingMeals'>Upcoming Meals</NavLink></li>
     <li><NavLink to='/login'>JoinUs</NavLink></li>
+    <li><NavLink to='/register'>Register</NavLink></li>
 
    
     
@@ -28,8 +41,8 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <div className="flex justify-center items-center">
-                        <img className=" rounded-full h-[60px]" src="https://i.ibb.co/6JgrcYV/job-portal-lettering-logo-design-template-concept-vector-37017445.jpg" alt=""  />
-                    <a className="btn btn-ghost normal-case text-xl">Job Portal</a>
+                        <img className=" rounded-full h-[60px]" src="https://i.ibb.co/NsvJWnC/8e1835e8abbc2b819663d61a034467e4.jpg" alt=""  />
+                    <a className="btn btn-ghost normal-case text-xl"> Hostel Portal</a>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -40,16 +53,16 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* {
+                    {
                         user && <div className=" flex gap-4 justify-center items-center mr-4">
                             <img className="rounded-full h-[50px]" src={user.photoURL} alt=""  />
                             <p>Logged in as <span className=" font-bold">{user.displayName}</span></p>
                         </div>
-                    } */}
-                    {/* {
+                    }
+                    {
                         user ? <button className="btn btn-secondary" onClick={handlogOut}>Logout</button> :
                         <Link to='/login'> <button className="btn btn-primary" >login</button></Link>
-                    } */}
+                    }
                 </div>
             </div>
         </div>
