@@ -4,6 +4,13 @@ import Home from "../pages/Home/Home";
 import Register from "../pages/Register/Register";
 import LogIn from "../pages/LogIn/LogIn";
 import MealsCategory from "../pages/Home/MealsCategory/MealsCategory";
+import AllMeals from "../pages/AllMeals/AllMeals";
+import Details from "../pages/Details/Details";
+import Payment from "../pages/Home/Payment/Payment";
+import PrivateRoutes from "./PrivateRoutes";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import MyProfile from "../pages/Dashboard/myProfile/MyProfile";
+import RequestedMeal from "../pages/Dashboard/RequestedMeal/RequestedMeal";
 
 
 const router = createBrowserRouter([
@@ -28,8 +35,39 @@ const router = createBrowserRouter([
             path:'/mealsCategory',
             element:<MealsCategory></MealsCategory>
 
+        },
+        {
+            path:'/allMeals',
+            element:<AllMeals></AllMeals>
+
+        },
+        {
+            path:'details/:id',
+            element:<Details></Details>,
+            loader:({params})=>fetch(`http://localhost:5001/detailsFood/${params.id}`)
+        },
+        {
+            path:'/payment/:title',
+            element:<PrivateRoutes><Payment></Payment></PrivateRoutes>
         }
+
       ]
     },
+    {
+        path:'/dashboard',
+        element:<Dashboard></Dashboard>,
+        children:[
+            {
+                path:'myProfile',
+                element:<MyProfile></MyProfile>
+            },
+            {
+                path:'requestMeal',
+                element:<RequestedMeal></RequestedMeal>
+            }
+
+        ]
+
+    }
   ]);
   export default router

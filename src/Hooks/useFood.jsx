@@ -1,13 +1,20 @@
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
+
+import useAxiosPublic from "./useAxiosPublic";
 
 
 const useFood = () => {
     const[foodItem,setFoodItem]= useState([])
+    // const axiosSecure = useAxiosSecure()
+    const axiosPublic = useAxiosPublic()
+    
+
     useEffect(()=>{
-        fetch('foodItem.json')
-        .then(res=>res.json())
-        .then(data=>setFoodItem(data))
-    },[])
+        axiosPublic.get('/foodItems')
+    .then(res=>{
+        setFoodItem(res.data)
+    })
+    },[axiosPublic])
     return[foodItem]
 };
 

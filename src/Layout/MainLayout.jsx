@@ -4,8 +4,7 @@ import NavBar from "./NavBar";
 
 const MainLayout = () => {
     return (
-        <div>
-            
+        <div className="container mx-auto">
             <NavBar></NavBar>
             <Outlet></Outlet>
         </div>

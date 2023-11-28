@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContex } from "../Provider/AuthProvider";
+import { FaShoppingCart } from "react-icons/fa";
 
 
 const NavBar = () => {
@@ -18,17 +19,22 @@ const NavBar = () => {
     <li><NavLink to='/'>Home</NavLink></li>
     {/* <li><NavLink to='/login'>login</NavLink></li>
     <li><NavLink to='/register'>Register</NavLink></li> */}
-    <li><NavLink to='/meals'>Meals</NavLink></li>
+    <li><NavLink to='/allMeals'>Meals</NavLink></li>
     <li><NavLink to='/upComingMeals'>Upcoming Meals</NavLink></li>
-    <li><NavLink to='/login'>JoinUs</NavLink></li>
-    <li><NavLink to='/register'>Register</NavLink></li>
+    <li><NavLink to='/register'>JoinUs</NavLink></li>
+    <li><NavLink className='' to='/dashboard'>
+            <button  className=" flex gap-4">
+                <FaShoppingCart></FaShoppingCart>
+                <div className="badge badge-secondary"></div>
+            </button>
+        </NavLink></li>
 
    
     
     </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-slate-300">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
