@@ -20,7 +20,7 @@ const NavBar = () => {
     {/* <li><NavLink to='/login'>login</NavLink></li>
     <li><NavLink to='/register'>Register</NavLink></li> */}
     <li><NavLink to='/allMeals'>Meals</NavLink></li>
-    <li><NavLink to='/upComingMeals'>Upcoming Meals</NavLink></li>
+    <li><NavLink to='/upcomeingMeal'>Upcoming Meals</NavLink></li>
     <li><NavLink to='/register'>JoinUs</NavLink></li>
     <li><NavLink className='' to='/dashboard'>
             <button  className=" flex gap-4">

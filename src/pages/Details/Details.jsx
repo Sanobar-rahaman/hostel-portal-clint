@@ -18,6 +18,7 @@ const Details = () => {
                 email:user.email,
                 status:'pending',
                 image,
+                title
             }
             axiosSecure.post('/addMeal',mealItem)
             .then(res=>{

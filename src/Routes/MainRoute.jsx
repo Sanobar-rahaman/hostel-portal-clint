@@ -11,6 +11,9 @@ import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import MyProfile from "../pages/Dashboard/myProfile/MyProfile";
 import RequestedMeal from "../pages/Dashboard/RequestedMeal/RequestedMeal";
+import ManageUser from "../pages/Dashboard/ManageUser/ManageUser";
+import AddMeal from "../pages/Dashboard/AddMeal/AddMeal";
+import UpcomeingMeal from "../pages/UpcomeingMeal/UpcomeingMeal";
 
 
 const router = createBrowserRouter([
@@ -42,9 +45,13 @@ const router = createBrowserRouter([
 
         },
         {
+            path:'/upcomeingMeal',
+            element:<UpcomeingMeal></UpcomeingMeal>
+        },
+        {
             path:'details/:id',
             element:<Details></Details>,
-            loader:({params})=>fetch(`http://localhost:5001/detailsFood/${params.id}`)
+            loader:({params})=>fetch(`https://hostel-management-system-server-pi.vercel.app/detailsFood/${params.id}`)
         },
         {
             path:'/payment/:title',
@@ -55,7 +62,7 @@ const router = createBrowserRouter([
     },
     {
         path:'/dashboard',
-        element:<Dashboard></Dashboard>,
+        element:<PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
         children:[
             {
                 path:'myProfile',
@@ -64,6 +71,15 @@ const router = createBrowserRouter([
             {
                 path:'requestMeal',
                 element:<RequestedMeal></RequestedMeal>
+            },
+            {
+                path:'manageUser',
+                element:<ManageUser></ManageUser>
+            },
+            {
+                path:'addMeal',
+                element:<AddMeal></AddMeal>
+
             }
 
         ]

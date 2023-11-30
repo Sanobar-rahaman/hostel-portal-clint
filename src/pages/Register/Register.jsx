@@ -4,11 +4,13 @@ import { AuthContex } from "../../Provider/AuthProvider";
 
 import { updateProfile } from "firebase/auth";
 import swal from "sweetalert";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 
 const Register = () => {
     const{createUser}=useContext(AuthContex)
     const navigate = useNavigate()
+    const axiosPublic = useAxiosPublic()
     const handleRegister = e => {
         e.preventDefault()
         // const tostId = toast.loading('log in success...')
@@ -20,6 +22,16 @@ const Register = () => {
         console.log(name,email, password,image);
         createUser(email,password)
         .then(result=>{
+            const userInfo ={email:email}
+            axiosPublic.post('users',userInfo)
+            .then(res=>{
+                if(res.data.insertedId){
+                    swal("Good job!", "user created successfully", "success");
+    
+                    console.log(result.user);
+                }
+            })
+
             swal("Good job!", "User created SuccessFully!", "success");
             console.log(result.user);
             updateProfile(result.user,{
